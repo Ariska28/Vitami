@@ -11,10 +11,10 @@
   box-shadow: 0 10px 10px rgba(#372e2c, 0.2);
   position: fixed;
   width: 100%;
+
   &-logotype {
     margin-right: auto;
     color: $dark;
-    font-family: $national;
     font-size: 30px;
     letter-spacing: 10px;
   }
@@ -38,18 +38,255 @@
       &:first-child {
         margin-left: 0px;
       }
-
       &__link {
-        font-family: $national;
         color: $dark;
         font-size: 20px;
-        font-weight: 500;
+        font-family: $bold;
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          background-color: $dark;
+          height: 8px;
+          width: 8px;
+          border-radius: 50%;
+          top: 100%;
+          right: 50%;
+          transform: translateX(-50%);
+          opacity: 0;
+        }
+      }
+
+      &:hover .header-list__item__link:before {
+        opacity: 1;
       }
     }
   }
 }
 
 .introduction {
-    padding-top:205px;
-    background-color: $pink;
+  padding-top: 205px;
+  background-color: $pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__headline {
+    width: 40%;
+    text-align: center;
+    font-family: $bold;
+    font-size: 70px;
+    line-height: 1;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: $dark;
+  }
+  &__paragraph {
+    font-family: $light;
+    font-size: 26px;
+    line-height: 1.23;
+    text-align: center;
+    width: 40%;
+  }
+  padding-bottom: 109px;
+}
+
+.watermelon {
+  background: linear-gradient($pink 60%, #b5afd8);
+}
+.conteiner {
+  &--reverse {
+    margin-left: auto;
+    padding-left: 20px;
+    margin-right: 0;
+    padding-right: 0px;
+  }
+
+  &--whithout-pudding {
+    margin-left: auto;
+    padding-left: 20px;
+    margin-right: 0;
+    padding-right: 0px;
+    padding-bottom: 0;
+  }
+
+  &--nopadding {
+    padding-bottom: 0;
+  }
+  display: flex;
+  max-width: 1756px;
+  margin-right: auto;
+  padding-right: 20px;
+  padding-bottom: 493px;
+
+  &__headline {
+    &--capitalize {
+      text-transform: capitalize;
+    }
+    font-family: $bold;
+    font-size: 70px;
+    line-height: 1;
+    font-weight: 500;
+    color: $dark;
+    text-transform: uppercase;
+
+    margin-bottom: 32px;
+    &--light {
+      font-family: $light;
+      font-weight: lighter;
+      text-transform: capitalize;
+    }
+  }
+
+  &__text {
+    &--reverse {
+      margin-right: 182px;
+      margin-left: 0;
+    }
+    margin-left: 182px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__paragraph {
+    font-family: $light;
+    font-size: 26px;
+    line-height: 1.23;
+    margin-bottom: 35px;
+  }
+
+  &__link {
+    font-family: $bold;
+    padding: 19px 76px 17px 76px;
+    background-color: #ffffff;
+    display: inline-block;
+    font-size: 23px;
+    color: $dark;
+    text-transform: uppercase;
+
+    &--brown {
+      background-color: $dark;
+      color: #fff;
+    }
+  }
+
+  &__picture {
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+    &--width {
+      width: 64.7%;
+    }
+
+    &__img {
+      &--width {
+        width: 100%;
+      }
+    }
+  }
+  &__text {
+    width: 40%;
+  }
+}
+.berries {
+  background: linear-gradient(#b5afd8 60%, #b1d87b);
+}
+
+.green {
+  background: linear-gradient(#b1d87b 60%, #ffb05d);
+}
+
+.orange {
+  background: #ffb05d;
+}
+
+.footer {
+  background-color: $dark;
+  &__conteiner {
+    padding: 40px 42px 40px 50px;
+    display: flex;
+  }
+  &__label {
+    font-family: $bold;
+    font-size: 20px;
+    line-height: 1.16;
+    color: #fff;
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    padding-right: 44px;
+  }
+
+  &__item {
+    &__link {
+      font-family: $bold;
+      font-size: 20px;
+      line-height: 1.16;
+      color: #fff;
+    }
+
+    &__form {
+
+
+      display: flex;
+      align-items: center;
+      position: relative; 
+      border-bottom: 0.5px solid #fff;
+      background-color: $dark;
+     
+      &__input {
+        background: none;
+        border: none; 
+        &[type="email"] {
+          color:#fff;
+          font-family: $bold;
+          font-size: 20px;
+        }
+      }
+
+
+
+      &__button {
+        border: none;
+        background: none;
+        font-family: $bold;
+        font-size: 20px;
+        color: #fff;
+        position: absolute;
+        right: 0;
+      }
+
+      ::-webkit-input-placeholder {
+        font-family: $light;
+        color: #fff;
+        opacity: 0.5;
+        font-size: 20px;
+      }
+      ::-moz-placeholder {
+        font-family: $light;
+        color: #fff;
+        opacity: 0.5;
+        font-size: 20px;
+
+      } /* Firefox 19+ */
+      :-moz-placeholder {
+        font-family: $light;
+        color: #fff;
+        opacity: 0.5;
+        font-size: 20px;
+  
+      } /* Firefox 18- */
+      :-ms-input-placeholder {
+        font-family: $light;
+        color: #fff;
+        opacity: 0.5;
+        font-size: 20px;
+
+      }
+    }
+  }
 }

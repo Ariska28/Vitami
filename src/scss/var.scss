@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "National Semibold";
+    src: url("../fonts/National-Semibold.woff") format("woff")
+   }
+  @font-face {
+    font-family:"National Light";
+    src: url("../fonts/National-Light.woff") format("woff"), url("/National-Light.woff2") format("woff2");
+   }
+$bold: "National Semibold";
+$light:"National Light";
 $pink:#F6CDD7;
 $dark:#372E2C;
 $national:'Padauk', sans-serif;
