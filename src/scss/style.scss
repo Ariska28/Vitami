@@ -182,6 +182,14 @@
 
 .footer {
   background-color: $dark;
+
+  &__author {
+    font-family: $light;
+    font-size: 20px;
+    line-height: 1.16;
+    color: #fff;
+    margin-left: auto;
+  }
   &__conteiner {
     padding: 40px 42px 40px 50px;
     display: flex;
@@ -198,6 +206,8 @@
     padding-right: 44px;
   }
 
+
+
   &__item {
     &__link {
       font-family: $bold;
@@ -205,10 +215,7 @@
       line-height: 1.16;
       color: #fff;
     }
-
     &__form {
-
-
       display: flex;
       align-items: center;
       position: relative; 
@@ -224,8 +231,6 @@
           font-size: 20px;
         }
       }
-
-
 
       &__button {
         border: none;
