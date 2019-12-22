@@ -1,6 +1,8 @@
 @import "var";
 @import "reset";
 
+
+
 .header {
   background-color: $pink;
   display: flex;
@@ -65,15 +67,25 @@
   }
 }
 
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient($pink 20%, #b5afd8 30%, #b1d87b 50%,#ffb05d 70%);
+  display: flex;
+
+}
+
 .introduction {
-  padding-top: 205px;
+  padding-top:10%;
   background-color: $pink;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10%;
   &__headline {
-    width: 40%;
+    width: 50%;
     text-align: center;
     font-family: $bold;
     font-size: 70px;
@@ -87,38 +99,27 @@
     font-size: 26px;
     line-height: 1.23;
     text-align: center;
-    width: 40%;
+    width: 50%;
   }
-  padding-bottom: 109px;
 }
 
-.watermelon {
-  background: linear-gradient($pink 60%, #b5afd8);
-}
 .conteiner {
-  &--reverse {
-    margin-left: auto;
-    padding-left: 20px;
-    margin-right: 0;
-    padding-right: 0px;
+  margin-top: 20%;
+
+  &:last-child {
+     margin-top: 0;
   }
 
-  &--whithout-pudding {
-    margin-left: auto;
-    padding-left: 20px;
-    margin-right: 0;
-    padding-right: 0px;
-    padding-bottom: 0;
+    &:nth-child(2) {
+   margin-top: 0; 
   }
 
-  &--nopadding {
-    padding-bottom: 0;
+  &--white {
+    background: #fff;
   }
-  display: flex;
-  max-width: 1756px;
-  margin-right: auto;
-  padding-right: 20px;
-  padding-bottom: 493px;
+    max-width: 1920px;
+    display: flex;
+
 
   &__headline {
     &--capitalize {
@@ -130,7 +131,6 @@
     font-weight: 500;
     color: $dark;
     text-transform: uppercase;
-
     margin-bottom: 32px;
     &--light {
       font-family: $light;
@@ -140,15 +140,11 @@
   }
 
   &__text {
-    &--reverse {
-      margin-right: 182px;
-      margin-left: 0;
-    }
-    margin-left: 182px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    padding: 10%;
   }
 
   &__paragraph {
@@ -176,32 +172,13 @@
   &__picture {
     display: flex;
     justify-content: flex-end;
-    width: 60%;
-    &--width {
-      width: 64.7%;
-    }
-
-    &__img {
-      &--width {
-        width: 100%;
-      }
-    }
+    width: 50%;
   }
   &__text {
-    width: 40%;
+    width: 50%;
   }
 }
-.berries {
-  background: linear-gradient(#b5afd8 60%, #b1d87b);
-}
 
-.green {
-  background: linear-gradient(#b1d87b 60%, #ffb05d);
-}
-
-.orange {
-  background: #ffb05d;
-}
 
 .footer {
   background-color: $dark;
