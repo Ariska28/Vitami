@@ -29,11 +29,12 @@
       display: flex;
       align-items: flex-start;
     }
+    
 
     &__button  {
       background-color: transparent;
       border: none;
-      &:focus .header-list{
+      &:focus .header-list--desible{
         display: block;
       }
     }
@@ -69,6 +70,10 @@
   }
 
   &-list {
+
+    &--desible {
+      display: none;
+    }
     display: flex;
     @media screen and (max-width: 950px) {
       position: absolute;
@@ -444,3 +449,4 @@
     }
   }
 }
+
