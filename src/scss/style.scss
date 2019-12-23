@@ -1,8 +1,6 @@
 @import "var";
 @import "reset";
 
-
-
 .header {
   background-color: $pink;
   display: flex;
@@ -13,6 +11,33 @@
   box-shadow: 0 10px 10px rgba(#372e2c, 0.2);
   position: fixed;
   width: 100%;
+  @media screen and (max-width: 950px) {
+    padding: 22px 20px;
+  }
+
+  &-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    display: none;
+    @media screen and (max-width: 950px) {
+      display: flex;
+    }
+
+    &__button {
+      background-color: transparent;
+      border: none;
+    }
+    &__item {
+      height: 2.5px;
+      background-color: $dark;
+      width: 100%;
+    }
+  }
 
   &-logotype {
     margin-right: auto;
@@ -24,6 +49,9 @@
   &-tools {
     margin-left: auto;
     display: flex;
+    @media screen and (max-width: 950px) {
+      display: none;
+    }
     &__link {
       &__svg {
         width: 22px;
@@ -35,6 +63,9 @@
 
   &-list {
     display: flex;
+    @media screen and (max-width: 950px) {
+      display: none;
+    }
     &__item {
       margin-left: 17px;
       &:first-child {
@@ -71,19 +102,23 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient($pink 20%, #b5afd8 30%, #b1d87b 50%,#ffb05d 70%);
+  background: linear-gradient(#f6cdd7 20%, #b5afd8 35%, 45%, #b1d87b 47%, 68%, #ffb05d 72%);
   display: flex;
-
 }
 
 .introduction {
-  padding-top:10%;
+  padding-top: 150px;
   background-color: $pink;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 10%;
+  @media screen and (max-width: 950px) {
+    padding: 5%;
+    padding-top: 150px;
+  }
+
   &__headline {
     width: 50%;
     text-align: center;
@@ -93,6 +128,12 @@
     font-weight: 500;
     margin-bottom: 30px;
     color: $dark;
+    @media screen and (max-width: 950px) {
+      font-size: 40px;
+    }
+    @media screen and (max-width: 950px) {
+      width: 100%;
+    }
   }
   &__paragraph {
     font-family: $light;
@@ -100,26 +141,41 @@
     line-height: 1.23;
     text-align: center;
     width: 50%;
+    @media screen and (max-width: 950px) {
+      width: 100%;
+    }
+    font-size: 20px;
   }
 }
 
 .conteiner {
   margin-top: 20%;
-
-  &:last-child {
-     margin-top: 0;
+  @media screen and (max-width: 1240px) and (min-width: 950px) {
+    margin-top: 10%;
   }
 
-    &:nth-child(2) {
-   margin-top: 0; 
+  &:last-child {
+    margin-top: 0;
+  }
+
+  &:nth-child(2) {
+    margin-top: 0;
   }
 
   &--white {
     background: #fff;
   }
-    max-width: 1920px;
-    display: flex;
+  max-width: 1920px;
+  display: flex;
+  @media screen and (max-width: 950px) {
+    flex-direction: column;
+  }
 
+  &--reverse {
+    @media screen and (max-width: 950px) {
+      flex-direction: column-reverse;
+    }
+  }
 
   &__headline {
     &--capitalize {
@@ -132,6 +188,9 @@
     color: $dark;
     text-transform: uppercase;
     margin-bottom: 32px;
+    @media screen and (max-width: 950px) {
+      font-size: 40px;
+    }
     &--light {
       font-family: $light;
       font-weight: lighter;
@@ -145,6 +204,16 @@
     align-items: flex-start;
     justify-content: center;
     padding: 10%;
+    @media screen and (max-width: 1500px) and (min-width: 1240px) {
+      padding: 7%;
+    }
+    @media screen and (max-width: 1240px) and (min-width: 950px) {
+      padding: 3%;
+    }
+
+    @media screen and (max-width: 950px) {
+      padding: 5%;
+    }
   }
 
   &__paragraph {
@@ -152,6 +221,9 @@
     font-size: 26px;
     line-height: 1.23;
     margin-bottom: 35px;
+    @media screen and (max-width: 950px) {
+      font-size: 20px;
+    }
   }
 
   &__link {
@@ -167,18 +239,52 @@
       background-color: $dark;
       color: #fff;
     }
+
+    @media screen and (max-width: 550px) {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__picture {
     display: flex;
     justify-content: flex-end;
     width: 50%;
+    @media screen and (max-width: 950px) {
+      width: 100%;
+    }
+    &--left {
+      @media screen and (max-width: 950px) {
+        justify-content: flex-start;
+      }
+    }
+
+    &--center {
+      @media screen and (max-width: 950px) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &__img {
+      @media screen and (max-width: 950px) {
+        width: 90%;
+      }
+      &--width {
+        @media screen and (max-width: 950px) {
+          width: 100%;
+        }
+      }
+    }
   }
   &__text {
     width: 50%;
+    @media screen and (max-width: 950px) {
+      width: 100%;
+    }
   }
 }
-
 
 .footer {
   background-color: $dark;
@@ -189,10 +295,18 @@
     line-height: 1.16;
     color: #fff;
     margin-left: auto;
+    @media screen and (max-width: 950px) {
+      margin: 0;
+      margin-top: 25px;
+    }
   }
   &__conteiner {
     padding: 40px 42px 40px 50px;
     display: flex;
+    @media screen and (max-width: 950px) {
+      flex-wrap: wrap;
+      padding: 21px 20px 31px 21px;
+    }
   }
   &__label {
     font-family: $bold;
@@ -204,29 +318,55 @@
 
   &__list {
     padding-right: 44px;
+    @media screen and (max-width: 950px) {
+      padding-right: 0;
+      &:first-child {
+        margin-right: 50px;
+      }
+    }
+
+    &--networks {
+      @media screen and (max-width: 550px) {
+        display: flex;      
+        margin-top: 56px;
+      }
+    }
+
+    &--form {
+      @media screen and (max-width: 650px) {  
+        margin-top: 25px;
+        width: 100%;
+      }
+    }
   }
 
-
-
   &__item {
+    width: 100%;
     &__link {
       font-family: $bold;
       font-size: 20px;
       line-height: 1.16;
       color: #fff;
+      @media screen and (max-width: 950px) {
+        margin-right: 15px;     
+      }
     }
     &__form {
       display: flex;
       align-items: center;
-      position: relative; 
+      position: relative;
       border-bottom: 0.5px solid #fff;
       background-color: $dark;
-     
+
+      @media screen and (max-width: 650px) {  
+        width: 100%;
+      }
+
       &__input {
         background: none;
-        border: none; 
+        border: none;
         &[type="email"] {
-          color:#fff;
+          color: #fff;
           font-family: $bold;
           font-size: 20px;
         }
@@ -240,6 +380,9 @@
         color: #fff;
         position: absolute;
         right: 0;
+        @media screen and (max-width: 950px) {  
+         display: none;
+        }
       }
 
       ::-webkit-input-placeholder {
@@ -253,21 +396,18 @@
         color: #fff;
         opacity: 0.5;
         font-size: 20px;
-
       } /* Firefox 19+ */
       :-moz-placeholder {
         font-family: $light;
         color: #fff;
         opacity: 0.5;
         font-size: 20px;
-  
       } /* Firefox 18- */
       :-ms-input-placeholder {
         font-family: $light;
         color: #fff;
         opacity: 0.5;
         font-size: 20px;
-
       }
     }
   }
