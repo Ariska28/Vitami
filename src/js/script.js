@@ -5,11 +5,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileNavTools = document.querySelector('.header-tools');
     const mobileMain = document.querySelector('.main');
     const mobileFooter = document.querySelector('.footer');
+    const mobileHeader = document.querySelector('.header');
     console.log(menuToggler);
     console.log(mobileNavContainer);
     console.log(mobileNavTools);
     console.log(mobileMain);
     console.log(mobileFooter);
+    console.log(mobileHeader);
 
     menuToggler.addEventListener('click', function () {
       menuToggler.classList.toggle('header-icon-active');
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
       mobileNavTools.classList.toggle('mobile-nav--active1');
       mobileMain.classList.toggle('main--hidden');
       mobileFooter.classList.toggle('footer--hidden');
+      mobileHeader.classList.toggle('header--white');
     });
 
 
