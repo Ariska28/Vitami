@@ -237,6 +237,7 @@
 }
 
 .main {
+  width: 100%;
   &.main--hidden {
     @media screen and (max-width: 950px) {
       display: none;
@@ -313,6 +314,7 @@
 
   &:last-child {
     padding-top: 0;
+
   }
 
   &:nth-child(2) {
@@ -322,7 +324,7 @@
   &--white {
     background: #fff;
   }
-  max-width: 1920px;
+   width: 100%;
   display: flex;
   @media screen and (max-width: 950px) {
     flex-direction: column;
@@ -420,6 +422,9 @@
     display: flex;
     justify-content: flex-end;
     width: 50%;
+    &--flex-start {
+      justify-content: flex-start;
+    }
     @media screen and (max-width: 950px) {
       width: 100%;
     }
