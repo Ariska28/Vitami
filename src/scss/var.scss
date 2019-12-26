@@ -1,13 +1,16 @@
 @font-face {
-    font-family: "National Semibold";
-    src: url("../fonts/National-Semibold.woff") format("woff")
-   }
-  @font-face {
-    font-family:"National Light";
-    src: url("../fonts/National-Light.woff") format("woff"), url("/National-Light.woff2") format("woff2");
-   }
-$bold: "National Semibold";
-$light:"National Light";
-$pink:#F6CDD7;
-$dark:#372E2C;
-$national:'Padauk', sans-serif;
+  font-family: "National-Semibold";
+  src: url("../fonts/National-Semibold.woff") format("woff"), 
+  url("../fonts/National-Semibold.woff2") format("woff2"); /* Modern Browsers */
+}
+
+@font-face {
+  font-family: "National-Light";
+  src: url("../fonts/National-Light.woff") format("woff"), 
+  url("../fonts/National-Light.woff2") format("woff2"); /* Modern Browsers */
+}
+
+$font-title:"National-Semibold";
+$font-text:"National-Light";
+$c-accent: #f6cdd7;
+$c-brand: #372e2c;

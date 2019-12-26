@@ -2,15 +2,20 @@
 @import "reset";
 
 .header {
-  background-color: $pink;
+  background-color: $c-accent;
   display: flex;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
   padding: 28px 50px 29px 50px;
-  box-shadow: 0 10px 10px rgba(#372e2c, 0.2);
+  box-shadow: 0 10px 10px rgba($c-brand, 0.2);
   position: fixed;
   width: 100%;
+
+  &-navigation {
+    width: 100%;
+  }
+
   &.header--white {
     @media screen and (max-width: 950px) {
     background-color: #fff;
@@ -37,7 +42,7 @@
       position: relative;
       width: 30px;
       height: 3px;
-      background-color: $dark;
+      background-color: $c-brand;
     }
 
     &-active &-line {
@@ -60,7 +65,7 @@
     position: absolute;
     width: 30px;
     height: 3px;
-    background-color: $dark;
+    background-color: $c-brand;
     top: 0;
     top: 10px;
     content: "";
@@ -72,7 +77,7 @@
     width: 30px;
     height: 3px;
     top: 0;
-    background-color: $dark;
+    background-color: $c-brand;
     top: -10px;
     content: "";
     transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
@@ -80,7 +85,7 @@
 
   &-logotype {
     &__link {
-      color: $dark;
+      color: $c-brand;
       font-size: 30px;
       letter-spacing: 10px;
       &:hover {
@@ -110,9 +115,9 @@
 
     &__text {
       margin-right: 21px;
-      color: $dark;
+      color: $c-brand;
       font-size: 30px;
-      font-family: $bold;
+      font-family: $font-title;
       position: relative;
       text-transform: uppercase;
       @media screen and (min-width: 950px) {
@@ -194,9 +199,9 @@
 
 
       &__link {
-        color: $dark;
+        color: $c-brand;
         font-size: 20px;
-        font-family: $bold;
+        font-family: $font-title;
         position: relative;
         text-transform: uppercase;
         display: flex;
@@ -209,7 +214,7 @@
         &:before {
           content: "";
           position: absolute;
-          background-color: $dark;
+          background-color: $c-brand;
           height: 8px;
           width: 8px;
           border-radius: 50%;
@@ -240,17 +245,17 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(#f6cdd7 20%, #b5afd8 35%, 45%, #b1d87b 47%, 68%, #ffb05d 72%);
   display: flex;
 }
 .introduction {
+  width: 100%;
   padding-top: 150px;
-  background-color: $pink;
+  background-color: $c-accent;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10%;
+  padding-bottom: 10%;
   @media screen and (max-width: 950px) {
     padding: 20px;
     padding-top: 150px;
@@ -259,12 +264,12 @@
   &__headline {
     width: 50%;
     text-align: center;
-    font-family: $bold;
+    font-family: $font-title;
     font-size: 70px;
     line-height: 1;
     font-weight: 500;
     margin-bottom: 30px;
-    color: $dark;
+    color: $c-brand;
     @media screen and (max-width: 950px) {
       font-size: 40px;
     }
@@ -273,7 +278,7 @@
     }
   }
   &__paragraph {
-    font-family: $light;
+    font-family: $font-text;
     font-size: 26px;
     line-height: 1.23;
     text-align: center;
@@ -286,17 +291,32 @@
 }
 
 .container {
-  margin-top: 20%;
+  padding-top: 20%;
+  &--pink {
+    background:$c-accent;
+  }
+  &--purple {
+    background:linear-gradient($c-accent 5%,#b5afd8 30%);
+  }
+
+  &--green {
+    background:linear-gradient(#b5afd8 5%, #b1d87b 30%);
+  }
+
+  &--yellow {
+    background:linear-gradient(#b1d87b 5%,#ffb05d 30%);
+  }
+
   @media screen and (max-width: 1240px) and (min-width: 950px) {
-    margin-top: 10%;
+    padding-top: 10%;
   }
 
   &:last-child {
-    margin-top: 0;
+    padding-top: 0;
   }
 
   &:nth-child(2) {
-    margin-top: 0;
+    padding-top: 0;
   }
 
   &--white {
@@ -318,18 +338,18 @@
     &--capitalize {
       text-transform: capitalize;
     }
-    font-family: $bold;
+    font-family: $font-title;
     font-size: 70px;
     line-height: 1;
     font-weight: 500;
-    color: $dark;
+    color: $c-brand;
     text-transform: uppercase;
     margin-bottom: 32px;
     @media screen and (max-width: 950px) {
       font-size: 40px;
     }
     &--light {
-      font-family: $light;
+      font-family: $font-text;
       font-weight: lighter;
       text-transform: capitalize;
     }
@@ -358,7 +378,7 @@
   }
 
   &__paragraph {
-    font-family: $light;
+    font-family: $font-text;
     font-size: 26px;
     line-height: 1.23;
     margin-bottom: 35px;
@@ -368,23 +388,23 @@
   }
 
   &__link {
-    font-family: $bold;
+    font-family: $font-title;
     padding: 19px 76px 17px 76px;
     background-color: #ffffff;
     display: inline-block;
     font-size: 23px;
-    color: $dark;
+    color: $c-brand;
     text-transform: uppercase;
     transition: background-color 0.2s ease-in ;
     &:hover {
       background-color: #dde5cd;
     }
     &--brown {
-      background-color: $dark;
+      background-color: $c-brand;
       color: #fff;
       transition: opacity 0.2s ease-in ;
       &:hover {
-        background-color: $dark;
+        background-color: $c-brand;
         opacity: 0.7;
       }
     }
@@ -442,10 +462,10 @@
     }
   }
 
-  background-color: $dark;
+  background-color: $c-brand;
 
   &__author {
-    font-family: $light;
+    font-family: $font-text;
     font-size: 20px;
     line-height: 1.16;
     color: #fff;
@@ -470,7 +490,7 @@
     }
   }
   &__label {
-    font-family: $bold;
+    font-family: $font-title;
     font-size: 20px;
     line-height: 1.16;
     color: #fff;
@@ -504,7 +524,7 @@
   &__item {
     width: 100%;
     &__link {
-      font-family: $bold;
+      font-family: $font-title;
       font-size: 20px;
       line-height: 1.16;
       color: #fff;
@@ -522,7 +542,7 @@
       align-items: center;
       position: relative;
       border-bottom: 0.5px solid #fff;
-      background-color: $dark;
+      background-color: $c-brand;
 
       @media screen and (max-width: 650px) {
         width: 100%;
@@ -533,7 +553,7 @@
         border: none;
         &[type="email"] {
           color: #fff;
-          font-family: $bold;
+          font-family: $font-title;
           font-size: 20px;
         }
       }
@@ -541,7 +561,7 @@
       &__button {
         border: none;
         background: none;
-        font-family: $bold;
+        font-family: $font-title;
         font-size: 20px;
         color: #fff;
         position: absolute;
@@ -552,25 +572,25 @@
       }
 
       ::-webkit-input-placeholder {
-        font-family: $light;
+        font-family: $font-text;
         color: #fff;
         opacity: 0.5;
         font-size: 20px;
       }
       ::-moz-placeholder {
-        font-family: $light;
+        font-family: $font-text;
         color: #fff;
         opacity: 0.5;
         font-size: 20px;
       } /* Firefox 19+ */
       :-moz-placeholder {
-        font-family: $light;
+        font-family: $font-text;
         color: #fff;
         opacity: 0.5;
         font-size: 20px;
       } /* Firefox 18- */
       :-ms-input-placeholder {
-        font-family: $light;
+        font-family: $font-text;
         color: #fff;
         opacity: 0.5;
         font-size: 20px;
