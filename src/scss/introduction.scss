@@ -1,0 +1,45 @@
+.introduction {
+  width: 100%;
+  padding-top: 150px;
+  background-color: $c-accent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10%;
+  background-color: $c-accent;
+  @media screen and (max-width: 950px) {
+    padding: 20px;
+    padding-top: 150px;
+  }
+
+
+ 
+  &__paragraph {
+    font-family: $font-text;
+    font-size: 26px;
+    line-height: 1.23;
+    text-align: center;
+    width: 50%;
+    @media screen and (max-width: 950px) {
+      width: 100%;
+      font-size: 20px;
+    }
+  }
+}
+
+.headline {
+  text-align: center;
+  font-family: $font-title;
+  font-size: 70px;
+  line-height: 1;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: $c-brand;
+  @media screen and (max-width: 950px) {
+    font-size: 40px;
+  }
+  @media screen and (max-width: 950px) {
+    width: 100%;
+  }
+}

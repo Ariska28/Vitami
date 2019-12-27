@@ -1,0 +1,20 @@
+.gallery {
+  width: 100%;
+  margin: auto;
+  &__headline {
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    background-color: $c-brand;
+    font-family: $font-title;
+    font-size: 70px;
+    line-height: 1;
+    font-weight: 500;
+    color: $c-white;
+    text-align: center;
+    padding: 31px 10px 42px;
+    @media screen and (max-width: 950px) {
+      font-size: 40px;
+    }
+  }
+}
