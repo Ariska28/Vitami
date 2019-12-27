@@ -1,6 +1,13 @@
 @import "var";
 @import "reset";
 
+body {
+  background-color: none;
+  @media screen and (max-width: 950px) { 
+    background-color:  $c-white;
+  }
+}
+
 .header {
   background-color: $c-accent;
   display: flex;
@@ -11,6 +18,10 @@
   box-shadow: 0 10px 10px rgba($c-brand, 0.2);
   position: fixed;
   width: 100%;
+  &--light {
+    background-color:  $c-white;
+    box-shadow:0px 10px 10px #DDE5CD;
+}
 
   &-navigation {
     width: 100%;
@@ -18,10 +29,11 @@
 
   &.header--white {
     @media screen and (max-width: 950px) {
-    background-color: #fff;
-    box-shadow:0 3px 6px #DDE5CD;
-    }
+    background-color: $c-white;
+    box-shadow:0px 10px 10px #DDE5CD;
   }
+    }
+  
 
   @media screen and (max-width: 950px) {
     padding: 22px 20px;
@@ -85,6 +97,7 @@
 
   &-logotype {
     &__link {
+      font-family: $font-text;
       color: $c-brand;
       font-size: 30px;
       letter-spacing: 10px;
@@ -106,6 +119,7 @@
         display: flex;
         flex-direction: column;
         margin-top:50px;
+        padding-bottom: 90px;
       }
     }
 
@@ -163,6 +177,7 @@
     @media screen and (max-width: 950px) {
       display: none;
       height: 100vh;
+      padding-top: 77px;
     }
 
     &.mobile-nav--active {
@@ -175,6 +190,7 @@
         top: 77.5px;
         display: block;
         overflow: scroll;
+        background-color:  transparent;
       }
     }
 
@@ -257,6 +273,9 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 10%;
+  &--white {
+    background-color:  $c-white;
+  }
   @media screen and (max-width: 950px) {
     padding: 20px;
     padding-top: 150px;
@@ -322,7 +341,7 @@
   }
 
   &--white {
-    background: #fff;
+    background:  $c-white;
   }
    width: 100%;
   display: flex;
