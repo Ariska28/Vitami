@@ -1,5 +1,6 @@
 .container {
   padding-top: 20%;
+
   &--pink {
     background: $c-accent;
   }
@@ -29,6 +30,7 @@
 
   &--white {
     background: $c-white;
+    padding-top: 0;
   }
   width: 100%;
   display: flex;
