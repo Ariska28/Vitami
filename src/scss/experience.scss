@@ -1,10 +1,7 @@
 .experince {
     width: 100%;
     background-color: $c-brand;
-    &__blocks {
-        display: flex;
-        justify-content: space-between;
-    }
+
     &__comment {
         background-color: $c-white;
         padding:10%;
@@ -37,11 +34,6 @@
         }
     }
 
-    &__block {
-        width: 32%;
-        padding-bottom: 2%;
-        border-left: 1px solid #fff;
-    }
     &__author {
         display: flex;
         align-items: center;
@@ -80,6 +72,20 @@
 
 }
 
+
+.home__block {
+    width: 32%;
+    padding-bottom: 2%;
+    border-left: 1px solid #fff;
+    &--brown-border {
+        padding:0 10px 120px 10px;
+        border-color: #707070;
+    }
+}
+.home__blocks {
+    display: flex;
+    justify-content: space-between;
+}
 .home-container {
     padding-top: 3%;
     max-width: 1920px;
