@@ -5,15 +5,38 @@
     background: $c-accent;
   }
   &--purple {
-    background: linear-gradient($c-accent 5%, #b5afd8 30%);
+    background: #b5afd8 30%;
   }
 
   &--green {
-    background: linear-gradient(#b5afd8 5%, #b1d87b 30%);
+    background:  #b1d87b ;
+    position: relative;
+    
+    &::before {
+      content: ' ';
+      position: absolute;
+      height: 20%;
+      top: 100%;
+      left: 0;
+      background: linear-gradient(180deg,#b1d87b -20%,rgba(255,255,255,0)90%);
+      z-index: 10;
+      width: 100%;
+    }
   }
 
   &--yellow {
-    background: linear-gradient(#b1d87b 5%, #ffb05d 30%);
+    background: #ffb05d ;
+    position: relative;
+
+    ::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 5%;
+      bottom: 95%;
+      left: 0;
+      background:linear-gradient(180deg,#ffb05d 0%,rgba(255, 255, 255, 0) );
+    }
   }
 
   @media screen and (max-width: 1240px) and (min-width: 950px) {
