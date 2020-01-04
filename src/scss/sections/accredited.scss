@@ -1,0 +1,29 @@
+.accredited {
+    width: 100%;
+    background-color: $c-brand;
+    display: flex;
+    align-items: center;
+
+    &__block {
+        display: flex;
+        margin-left: auto;
+    }
+
+    &__headline {
+        margin-left: 57px;
+        text-transform: uppercase;
+        font-size: 30px;
+        font-family: $font-title;
+        color:#fff;
+    }
+
+    &__photo {
+        padding: 21px 51px;
+        border-left: 1px solid $c-white;
+        &-img {
+            width: 100px;
+            border-radius: 50%;
+        }
+    }
+
+}
