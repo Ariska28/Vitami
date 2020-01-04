@@ -1,13 +1,11 @@
-@import "var";
-@import "reset";
-@import "header";
-@import "container";
-@import "introduction";
-@import "container2";
-@import "footer";
-@import "white-block";
-
-
+@import "var/var";
+@import "common/reset";
+@import "common/header";
+@import "common/main";
+@import "common/footer";
+@import "sections/white-block";
+@import "sections/introduction";
+@import "containers/container";
 
 
 

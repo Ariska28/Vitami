@@ -1,7 +1,8 @@
-@import "var";
-@import "reset";
-@import "start";
-@import "gallery";
-@import "experience";
-@import "journay";
-@import "images";
+@import "var/var";
+@import "common/reset";
+@import "sections/start";
+@import "sections/gallery";
+@import "sections/experience";
+@import "sections/journay";
+@import "sections/images";
+@import "containers/box";

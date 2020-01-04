@@ -1,0 +1,21 @@
+.block {
+  width: 32%;
+  padding-bottom: 2%;
+  border-left: 1px solid #fff;
+  &--brown-border {
+    padding: 0 10px 120px 10px;
+    border-color: #707070;
+  }
+}
+.blocks {
+  display: flex;
+  justify-content: space-between;
+}
+.box {
+  padding-top: 3%;
+  max-width: 1920px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 0;
+  margin: auto;
+}
