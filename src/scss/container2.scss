@@ -8,9 +8,10 @@
       content: ' ';
       position: absolute;
       height: 20%;
-      top: 100%;
+      top: 99%;
       left: 0;
       background: linear-gradient(180deg,$c-accent 0%,rgba(255,255,255,0));
+      background-color: rgba(255,255,255,0);
       z-index: 10;
       width: 100%;
     }
@@ -22,7 +23,7 @@
       content: ' ';
       position: absolute;
       height: 20%;
-      top: 100%;
+      top: 99%;
       left: 0;
       background: linear-gradient(180deg,#b5afd8 0%,rgba(255,255,255,0));
       z-index: 10;
@@ -39,7 +40,7 @@
       content: ' ';
       position: absolute;
       height: 20%;
-      top: 100%;
+      top: 99%;
       left: 0;
       background: linear-gradient(180deg,#b1d87b 0%,rgba(255,255,255,0));
       z-index: 10;
