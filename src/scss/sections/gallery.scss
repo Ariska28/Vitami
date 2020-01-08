@@ -43,7 +43,7 @@
   align-items: center;
   justify-content: center;
   &:focus-within {
-    flex: 3.4;
+    flex: 3;
   }
 
   &__small-text {
@@ -73,10 +73,11 @@
     font-size: 20px;
     text-transform: uppercase;
     color: $c-brand;
-    margin-top: auto;
-    margin-bottom: 69px;
-    
+    z-index: 10;
+    position: absolute;
+    bottom: 69px;
   }
+
   &__toggle:focus + &__text {
     display: flex;
     align-items: center;
@@ -85,13 +86,8 @@
     z-index:10;
   }
 
-  &__toggle:focus ~ &__link {
-    z-index:10;
-  }
-
   &__text {
-    margin-top: auto;
-
+    margin: auto;
   }
 
   &__toggle {
@@ -110,18 +106,19 @@
       background-color: transparent;
       color: transparent;
     }
-
     &-1 {
-      
       background: linear-gradient(#ffe5ef 40%, #f2c3ae 60%);
-      &:focus {
+      z-index:11;
+      &:focus{
         z-index:1;
         background: linear-gradient(rgba(#ffe5ef,0.6) 40%,rgba(#f2c3ae,0.6) 60%);
       }
+
     }
     
     &-2 {
       background: linear-gradient(#c7bfd9 40%, #bcd7f5 60%);
+      z-index:11;
       &:focus {
         z-index:1;
         background: linear-gradient(rgba(#c7bfd9,0.6) 40%,rgba(#bcd7f5,0.6) 60%);
@@ -129,6 +126,7 @@
     }
     &-3 {
       background: linear-gradient(#c4d98b 40%, #f1f7df 60%);
+      z-index:11;
       &:focus {
         z-index:1;
         background: linear-gradient(rgba(#c4d98b,0.6) 40%,rgba(#f1f7df,0.6) 60%);
@@ -136,6 +134,7 @@
     }
     &-4 {
       background: linear-gradient(#e5c77a 40%, #f2e991 60%);
+      z-index:11;
       &:focus {
         z-index:1;
         background: linear-gradient(rgba(#e5c77a,0.6) 40%,rgba(#f2e991,0.6) 60%);
