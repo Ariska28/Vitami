@@ -37,13 +37,15 @@
   background-position: center;
   background-size: cover;
   transition: flex 0.8s ease;
-  border: none;
   position: relative;
-  &__text {
-    height: 100%;
-    display: none;
-    transition: display 0.8s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &:focus-within {
+    flex: 3.4;
   }
+
   &__small-text {
     text-transform: uppercase;
     font-family: $font-title;
@@ -61,6 +63,7 @@
   &__light-text {
     font-family: $font-text;
     font-size: 70px;
+    text-align: center;
   }
   &__link {
     background-color: #fff;
@@ -72,41 +75,88 @@
     color: $c-brand;
     margin-top: auto;
     margin-bottom: 69px;
+    
   }
-
-  &:focus {
-    flex: 3.1;
-  }
-
-  &:focus &__text {
+  &__toggle:focus + &__text {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index:10;
   }
-  &-1 {
+
+  &__toggle:focus ~ &__link {
+    z-index:10;
+  }
+
+  &__text {
+    margin-top: auto;
+
+  }
+
+  &__toggle {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: $font-title;
+    font-size: 70px;
+    text-transform: uppercase;
+
     &:focus {
-      flex: 3.1;
-      height: 100%;
-      background-position: center;
-      background-size: cover;
-      transition: flex 0.8s ease;
-      border: none;
-      position: relative;
-      background-image: url("../img/gradient.png"), url("../img/pi.png");
+      background-color: transparent;
+      color: transparent;
     }
-    background: linear-gradient(#ffe5ef 40%, #f2c3ae 60%);
+
+    &-1 {
+      
+      background: linear-gradient(#ffe5ef 40%, #f2c3ae 60%);
+      &:focus {
+        z-index:1;
+        background: linear-gradient(rgba(#ffe5ef,0.6) 40%,rgba(#f2c3ae,0.6) 60%);
+      }
+    }
+    
+    &-2 {
+      background: linear-gradient(#c7bfd9 40%, #bcd7f5 60%);
+      &:focus {
+        z-index:1;
+        background: linear-gradient(rgba(#c7bfd9,0.6) 40%,rgba(#bcd7f5,0.6) 60%);
+      }
+    }
+    &-3 {
+      background: linear-gradient(#c4d98b 40%, #f1f7df 60%);
+      &:focus {
+        z-index:1;
+        background: linear-gradient(rgba(#c4d98b,0.6) 40%,rgba(#f1f7df,0.6) 60%);
+      }
+    }
+    &-4 {
+      background: linear-gradient(#e5c77a 40%, #f2e991 60%);
+      &:focus {
+        z-index:1;
+        background: linear-gradient(rgba(#e5c77a,0.6) 40%,rgba(#f2e991,0.6) 60%);
+      }
+    }
+
+  }
+
+  &-1 {
+    background-image:  url("../img/pi.png");
   }
 
   &-2 {
-    background-image: url("../img/grad.png"), url("../img/bl.png");
+    background-image:  url("../img/bl.png");
   }
 
   &-3 {
-    background-image: url("../img/readi.png"), url("../img/gr.png");
+    background-image: url("../img/gr.png");
   }
 
   &-4 {
-    background-image: url("../img/gra.png"), url("../img/or.png");
+    background-image: url("../img/or.png");
   }
 }
