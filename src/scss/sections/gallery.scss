@@ -36,9 +36,9 @@
   height: 100%;
   background-position: center;
   background-size: cover;
-  background-repeat: none;
   transition: flex 0.8s ease;
   border: none;
+  position: relative;
   &__text {
     height: 100%;
     display: none;
@@ -59,10 +59,8 @@
   }
 
   &__light-text {
-
     font-family: $font-text;
     font-size: 70px;
-
   }
   &__link {
     background-color: #fff;
@@ -71,7 +69,7 @@
     font-family: $font-title;
     font-size: 20px;
     text-transform: uppercase;
-    color:$c-brand;
+    color: $c-brand;
     margin-top: auto;
     margin-bottom: 69px;
   }
@@ -80,26 +78,35 @@
     flex: 3.1;
   }
 
-  &:focus &__text{
+  &:focus &__text {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
   &-1 {
-    background-image: url("../img/gradient.png"), url("../img/pi.png");
+    &:focus {
+      flex: 3.1;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      transition: flex 0.8s ease;
+      border: none;
+      position: relative;
+      background-image: url("../img/gradient.png"), url("../img/pi.png");
+    }
+    background: linear-gradient(#ffebeb, #ffd8c7);
   }
-  
+
   &-2 {
     background-image: url("../img/grad.png"), url("../img/bl.png");
   }
-  
+
   &-3 {
     background-image: url("../img/readi.png"), url("../img/gr.png");
   }
-  
+
   &-4 {
     background-image: url("../img/gra.png"), url("../img/or.png");
   }
 }
-
