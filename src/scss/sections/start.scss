@@ -10,6 +10,10 @@
         margin-top: 106px;
       display: flex;
       justify-content: center;
+      @media screen and (max-width:950px)
+      {
+        flex-direction: column;
+      }
       &-item {
         display: flex;
         align-items: center;
@@ -18,6 +22,12 @@
         flex: 0 0 25%;
         padding: 0 2% 2%;
         border-left: 1px solid #707070;
+        @media screen and (max-width:950px)
+        {
+          border-left: none;
+          border-top: 1px solid #707070;
+
+        }
         &:first-child {
           border-left: none;
         }

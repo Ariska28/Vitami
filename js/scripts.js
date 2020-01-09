@@ -17,6 +17,43 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   
   section.on('click', toggleAccordion);
+});
+
+
+$().ready(function () {
+  $().ready(function () {
+      $('.blocks').slick({
+          centerMode: true,
+          centerPadding: '20px',
+          prevArrow: $('.blocks__prewarrow'),
+          nextArrow: $('.blocks__nextarrow'),
+          slidesToShow: 3                                                                             ,
+          dots: true,
+          infinite:false,
+          responsive: [
+              {
+                  breakpoint: 1000,
+                  settings: {
+                      slidesToShow: 2,
+                      dots: true,
+                      centerPadding: '0px',
+                      centerMode: true,
+                      infinite: true,
+                  }
+              },
+              {
+                  breakpoint: 800,
+                  settings: {
+                      slidesToShow: 1,
+                      dots: true,
+                      centerPadding: '0px',
+                      centerMode: true,
+                      infinite: true,
+                  }
+              }
+          ]
+      });
+  });
 
 });
 

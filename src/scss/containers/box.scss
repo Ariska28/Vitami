@@ -10,6 +10,7 @@
 .blocks {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .box {
   padding-top: 3%;
@@ -18,3 +19,4 @@
   padding-bottom: 0;
   margin: auto;
 }
+

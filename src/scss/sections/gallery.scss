@@ -22,6 +22,16 @@
     display: flex;
     align-items: stretch;
     height: 70vh;
+    @media screen and (max-width:1200px) and (min-width:950px)
+    {
+      height: 50vh;
+    }
+    @media screen and  (max-width:950px)
+    {
+      display: flex;
+      flex-direction: column;
+      height: 130vh;
+    }
   }
 
   &-item {
@@ -35,6 +45,10 @@
     flex-direction: column;
     z-index: 3;
     transition: all 0.5s ease;
+    @media screen and  (max-width:950px)
+    {
+      width: 100%;
+    }
 
     &::before {
       content: " ";
@@ -177,12 +191,15 @@
       text-transform: uppercase;
       z-index: 40;
       display: none;
+      @media screen and (max-width:950px)
+      {
+        font-size: 50px;
+      }
     }
   
     &__light-text {
       position: relative;
       font-family: $font-text;
-      font-size: 70px;
       text-align: center;
       z-index: 40;
       display: none;
