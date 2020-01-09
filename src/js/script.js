@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
   function openMenu() {
     const menuToggler = document.querySelector('.js-menu-btn');
     const mobileNavContainer = document.querySelector('.js-navigation');
-    console.log(menuToggler);
-    console.log(mobileNavContainer);
 
     menuToggler.addEventListener('click', function () {
       menuToggler.classList.toggle('header-icon-isActive');
@@ -11,5 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   };
   openMenu();
+
+  var section = $('li');
+  function toggleAccordion() {
+    section.removeClass('isActive');
+    $(this).addClass('isActive');
+  }
+  
+  section.on('click', toggleAccordion);
+
 });
 
