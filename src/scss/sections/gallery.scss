@@ -13,8 +13,9 @@
     color: $c-white;
     text-align: center;
     padding: 31px 10px 42px;
-    @media screen and (max-width: 950px) {
-      font-size: 40px;
+    @media screen and (max-width: 1200px) {
+      font-size: 30px;
+      padding:31px 15px;
     }
   }
 
@@ -191,9 +192,9 @@
       text-transform: uppercase;
       z-index: 40;
       display: none;
-      @media screen and (max-width:950px)
+      @media screen and (max-width:1200px)
       {
-        font-size: 50px;
+        font-size: 40px;
       }
     }
   
@@ -221,12 +222,17 @@
       font-size: 70px;
       text-transform: uppercase;
       z-index: 40;
+      @media screen and (max-width:1200px)
+      {
+        font-size: 40px;
+      }
     }
 
     .img {
       position: absolute;
       height: 100%;
       width: 100%;
+      
     }
   }
 

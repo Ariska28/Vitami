@@ -1,54 +1,57 @@
 .accredited {
-    width: 100%;
-    background-color: $c-brand;
+  width: 100%;
+  background-color: $c-brand;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.5px solid #fff;
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+  }
+
+  &__block {
     display: flex;
-    align-items: center;
-    border-bottom: 0.5px solid #fff;
-    @media screen and (max-width:960px) {
-        flex-direction: column;
+    margin-left: auto;
+    @media screen and (max-width: 960px) {
+      flex-wrap: wrap;
+      margin-left: 0px;
+      width: 100%;
     }
+  }
 
+  &__headline {
+    margin-left: 57px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: $font-title;
+    color: #fff;
+    @media screen and (max-width: 960px) {
+      padding: 25px;
+      margin-left: 0;
+    }
+  }
+  &__authors {
+    @media screen and (max-width: 960px) {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      border: 1px solid $c-white;
+    }
+  }
+
+  &__photo {
+    padding: 21px 51px;
+    border-left: 1px solid $c-white;
+    @media screen and (max-width: 960px) {
+      border: none;
+    }
+    &-img {
+      width: 100px;
+      border-radius: 50%;
+      @media screen and (max-width: 960px) {
+        width: 62px;
+      }
+    }
  
-    &__block {
-        display: flex;
-        margin-left: auto;
-        @media screen and (max-width:960px) {
-            flex-wrap: wrap;
-        }
-    }
-
-    &__headline {
-        margin-left: 57px;
-        text-transform: uppercase;
-        font-size: 30px;
-        font-family: $font-title;
-        color:#fff;
-        @media screen and (max-width:960px) {
-           padding: 25px;
-           margin-left:0;
-         }
-    }
-    &__authors {
-        @media screen and (max-width:960px) {
-           width: 50%;
-           display: flex;
-           justify-content: center;
-           border: 1px solid $c-white;
-        }
-
-
-    }
-
-    &__photo {
-        padding: 21px 51px;
-        border-left: 1px solid $c-white;
-        @media screen and (max-width:960px) {
-            border: none;
-         }
-        &-img {
-            width: 100px;
-            border-radius: 50%;
-        }
-    }
-
+  }
 }

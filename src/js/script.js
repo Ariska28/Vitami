@@ -24,7 +24,7 @@ $().ready(function () {
   $().ready(function () {
       $('.blocks').slick({
           centerMode: true,
-          centerPadding: '20px',
+          centerPadding: '0px',
           prevArrow: $('.blocks__prewarrow'),
           nextArrow: $('.blocks__nextarrow'),
           slidesToShow: 3                                                                             ,
@@ -32,7 +32,7 @@ $().ready(function () {
           infinite:false,
           responsive: [
               {
-                  breakpoint: 1000,
+                  breakpoint: 1400,
                   settings: {
                       slidesToShow: 2,
                       dots: true,
@@ -42,7 +42,7 @@ $().ready(function () {
                   }
               },
               {
-                  breakpoint: 800,
+                  breakpoint: 900,
                   settings: {
                       slidesToShow: 1,
                       dots: true,

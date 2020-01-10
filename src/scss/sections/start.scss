@@ -1,50 +1,75 @@
 .start {
-    width: 100%;
-    background-color: $c-white;
-    &-container {
-      padding: 198px 20px 0;
-      margin: auto;
+  width: 100%;
+  background-color: $c-white;
+  &-container {
+    padding: 198px 20px 0;
+    margin: auto;
+    @media screen and (max-width: 500px) {
+      padding: 138px 20px 0;
     }
-  
-    &__list {
-        margin-top: 106px;
-      display: flex;
-      justify-content: center;
-      @media screen and (max-width:950px)
-      {
-        flex-direction: column;
-      }
-      &-item {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        flex: 0 0 25%;
-        padding: 0 2% 2%;
-        border-left: 1px solid #707070;
-        @media screen and (max-width:950px)
-        {
-          border-left: none;
-          border-top: 1px solid #707070;
+  }
 
+  &__list {
+    margin-top: 106px;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: 950px) {
+      flex-direction: column;
+      margin-top: 56px;
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      flex: 0 0 25%;
+      padding: 0 2% 2%;
+      border-left: 1px solid #707070;
+      @media screen and (max-width: 950px) {
+        border-left: none;
+        border-top: 1px solid #707070;
+        padding: 3%;
+      }
+      @media screen and (max-width: 500px) {
+        flex-direction: row;
+      }
+      &:first-child {
+        border-left: none;
+      }
+      &__picture {
+        width: 120px;
+        height: 100px;
+        stroke: #372e2c;
+        stroke-width: 3;
+        @media screen and (max-width: 500px) {
+          stroke-width: 5;
         }
-        &:first-child {
-          border-left: none;
+        &--load {
+          stroke-width: 1;
+          fill: #372e2c;
+          @media screen and (max-width: 500px) {
+            stroke-width: 2;
+          }
         }
-        &__picture {
-          width: 120px;
+      }
+      &__text {
+        text-align: center;
+        font-family: $font-text;
+        font-size: 26px;
+        @media screen and (max-width: 500px) {
+          font-size: 20px;
+          text-align: left;
+          padding-left: 25px;
         }
-        &__text {
-          text-align: center;
-          font-family: $font-text;
-          font-size: 26px;
-        }
-        &__headline {
-          display: block;
-          font-family: $font-title;
-          font-size: 26px;
+      }
+      &__headline {
+        display: block;
+        font-family: $font-title;
+        font-size: 26px;
+        @media screen and (max-width: 500px) {
+          font-size: 20px;
         }
       }
     }
   }
-  
+}
